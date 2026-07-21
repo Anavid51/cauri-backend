@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: cauri-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: FLW_SECRET_KEY
+        sync: false
+      - key: FLW_PUBLIC_KEY
+        sync: false
+      - key: FLW_SECRET_HASH
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: OWNER_MOMO_NUMBER
+        value: "22962552778"
+      - key: OWNER_MOMO_NETWORK
+        value: "MTN"
